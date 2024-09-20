@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="Utitbest_MediaPlayer.css">
+    <link rel="shortcut icon" href="Apple-logo.png">
+   
+</head>
+<body>
+
+<div class="Music-player-wrapper">
+    <div class="player">
+        <div class="player-name">
+            <div class="player-nme">
+                <span class="openPlayList cls">
+                    <label for="uploader" class="uploaderInvokeer" style="cursor: pointer;">
+                    <i class="fas fa-bars"></i>
+                    </label>
+                </span>
+                <span class="player-trackOf">
+                    <!-- <span class="list_playingNow"></span> of -->
+                    
+                    <!-- <span class="list_of"></span> -->
+                </span>
+                <span onclick="toggler()" class="toggle-player cls toggle-cnt">
+                    <i class="fas fa-cog fa-1x" style="cursor: pointer;"></i>
+                </span>
+            </div>
+        </div>
+        <div class="player-artwork">
+            <img src="1d6c7bc4-c0d6-496a-9f26-867e9efd4836.jpg" alt="" class="artwork-img">
+        </div>
+        <div class="player-info">
+            <h5 class="artistName"></h5>
+            <h6 class="trackName"></h6>
+        </div>
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <hr class="na">
+        </div>
+        <div class="player-vol">
+            <div class="trackSpeed">
+                <span class="trackStarter"></span>
+                <input type="range" value="0" max="100" min="0" class="trackSeek player-range" onchange="ForwardBackward()">
+                <span class="trackEnd"></span>
+            </div>
+            <div class="player-vols">
+                <span><i class="fa fa-volume-down"></i></span>
+                <input type="range" value="0" max="100" min="0" onchange="ChangeVolume()" class="volumeSeek">
+                <span><i class="fa fa-volume-up"></i></span>
+            </div>
+        </div>
+        
+
+        <div class="player-controls">
+            <span class="trackShuff cls" onclick="randomTrack()">
+                <i class="fa fa-shuffle fa-2x"></i>
+            </span>
+
+            <span class="previous cls" onclick="playPreviousTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </span>
+
+            <span class="playPause cls" onclick="playPauseTrack()">
+                <i class="fa fa-play-circle fa-4x"></i>
+            </span>
+
+            <span class="playNext cls" onclick="playNextTrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </span>
+            <span class="repeat cls" style="position: relative;" onclick="repeatTrack()">
+                <i class="fa fa-repeat fa-2x"></i>
+            </span>
+        </div>
+        <div class="player-wave">
+            <div class="wave-wrap">
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+                <span class="wve"></span>
+            </div>
+        </div>
+        <div class="element-tool default">
+            <div class="tools">
+                <span class="main-tool">
+                    <i class="fa fa-video"></i> Video
+                </span>
+                <span class="main-tool">
+                    <i class="fa fa-music"></i> Audio
+                </span>
+                <span class="main-tool" onclick="hideShowList()">
+                    <i class="fa fa-list"></i> List
+                </span>
+                <span class="main-tool" onclick="showspeed()">
+                    <i class="fa fa-compass"></i> Speed
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="Utitbest_MediaPlayer.js"></script>
+<script src="../fontawesome/js/all.min.js"></script>
+</body>
+</html>
