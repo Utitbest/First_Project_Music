@@ -210,7 +210,6 @@ window.addEventListener('keydown', function(event){
 function playTrack(){
     currentTrack.play();
     currentTrack.volume = getvolume();
-    // currentTrack.playbackSpeed = 3;
     is_playing = true;
     artworkImg.classList.add('inPlay')
     playPause.innerHTML = '<i class="fas fa-pause-circle fa-5x"></i>';
@@ -360,23 +359,12 @@ document.addEventListener('keydown', function(e){
         let currVal = volumeSeek.value++;
         volumeSeek.value = currVal +1;
         currentTrack.volume = getvolume();
-        // alert(getvolume())
         localStorage.setItem('playvolume', volumeSeek.value / 100);
     }else if(e.which == 40){
         volumeSeek.value -= 1;
         currentTrack.volume = getvolume();
         localStorage.setItem('playvolume', volumeSeek.value / 100);
-    }
-    // else if(e.which == 175){
-    //     let currVal = volumeSeek.value++;
-    //     volumeSeek.value = currVal +2;
-    //     currentTrack.volume = getvolume();
-    //     localStorage.setItem('playvolume', volumeSeek.value / 100);
-    // }else if(e.which == 174){
-    //     volumeSeek.value -= 2;
-    //     currentTrack.volume = getvolume();
-    //     localStorage.setItem('playvolume', volumeSeek.value / 100);
-    // }    
+    }   
 });
 
 // generate input
@@ -628,4 +616,3 @@ updateVolumeSlider();
 window.onload = function(){
     checkRandomActive(); 
 };
-// console.log(navigator)
